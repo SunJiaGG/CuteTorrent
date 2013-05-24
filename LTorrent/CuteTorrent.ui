@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CuteTorrentClass</class>
+ <widget class="QMainWindow" name="CuteTorrentClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>566</width>
+    <height>659</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::NoContextMenu</enum>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>СuteTorrent</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="ltorrent.qrc">
+    <normaloff>:/icons/app.ico</normaloff>:/icons/app.ico</iconset>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_3">
+    <property name="sizeConstraint">
+     <enum>QLayout::SetDefaultConstraint</enum>
+    </property>
+    <item row="0" column="0">
+     <widget class="QListView" name="listView">
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="tabPosition">
+       <enum>QTabWidget::North</enum>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <property name="elideMode">
+       <enum>Qt::ElideMiddle</enum>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>TAB_INFO</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_4">
+        <item row="2" column="0">
+         <widget class="QLabel" name="label">
+          <property name="text">
+           <string>INFO_ACTIVE_TIME</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="5">
+         <widget class="QGraphicsView" name="piceDwonloadedView">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>20</height>
+           </size>
+          </property>
+          <property name="verticalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAlwaysOff</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+          </property>
+          <property name="optimizationFlags">
+           <set>QGraphicsView::DontAdjustForAntialiasing|QGraphicsView::DontClipPainter|QGraphicsView::DontSavePainterState</set>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1" colspan="2">
+         <widget class="QLabel" name="downloadSpeedLabel">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="4">
+         <widget class="QLabel" name="uploadedBytesLabel">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1" colspan="2">
+         <widget class="QLabel" name="activetimeLabel">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="4">
+         <widget class="QLabel" name="uploadSpeedLabel">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="0">
+         <widget class="QLabel" name="label_10">
+          <property name="text">
+           <string>INFO_SEED_COUNT</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="3">
+         <widget class="QLabel" name="label_11">
+          <property name="text">
+           <string>INFO_PEER_COUNT</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="4">
+         <widget class="QLabel" name="peerCoutLabel">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="3">
+         <widget class="QLabel" name="label_9">
+          <property name="text">
+           <string>INFO_UPLOAD_SPEED</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>INFO_DOWNLOADED</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="0">
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>INFO_DOWNLOAD_SPEED</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3">
+         <widget class="QLabel" name="label_7">
+          <property name="text">
+           <string>INFO_REMAININF_TIME</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="4">
+         <widget class="QLabel" name="timeleftLabel">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="0">
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>INFO_TOTAL_SIZE</string>
+          </property>
+         </widget>
+        </item>
+        <item row="8" column="1" colspan="2">
+         <widget class="QLabel" name="seedCoutLabel">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1" colspan="2">
+         <widget class="QLabel" name="downloadedBytesLabel">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="1" colspan="2">
+         <widget class="QLabel" name="totalSizeLabel">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="3">
+         <widget class="QLabel" name="label_8">
+          <property name="text">
+           <string>INFO_UPLOADED</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>INFO_DESCRIBTION</string>
+          </property>
+         </widget>
+        </item>
+        <item row="5" column="1" colspan="4">
+         <widget class="QLabel" name="describtionLabel">
+          <property name="contextMenuPolicy">
+           <enum>Qt::ActionsContextMenu</enum>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="3">
+         <widget class="QLabel" name="label_4">
+          <property name="text">
+           <string>INFO_PATH</string>
+          </property>
+         </widget>
+        </item>
+        <item row="7" column="4">
+         <widget class="QLabel" name="pathLabel">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>TAB_PEERS</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="0">
+         <widget class="QTableWidget" name="peerTableWidget">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>10</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::NoPen</enum>
+          </property>
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+          <attribute name="horizontalHeaderCascadingSectionResizes">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>PEER_IP</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>PEER_CLIENT_NAME</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>PEER_%</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>PEER_DOWNLOAD_SPEED</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>PEER_UPLOAD_SPEED</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>PEER_DOWNLOADED</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>PEER_UPLOADED</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>TAB_TRACKERS</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <widget class="QTableWidget" name="trackerTableWidget">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::NoPen</enum>
+          </property>
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+          <attribute name="horizontalHeaderCascadingSectionResizes">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="horizontalHeaderDefaultSectionSize">
+           <number>120</number>
+          </attribute>
+          <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>TRACKER_URL</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>TRACKER_STATUS</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>TRACKER_NEXT_ANNOUNCE</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>TAB_FILES</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <widget class="QTableWidget" name="fileTableWidget">
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>150</height>
+           </size>
+          </property>
+          <property name="contextMenuPolicy">
+           <enum>Qt::CustomContextMenu</enum>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::NoEditTriggers</set>
+          </property>
+          <property name="gridStyle">
+           <enum>Qt::NoPen</enum>
+          </property>
+          <property name="sortingEnabled">
+           <bool>true</bool>
+          </property>
+          <attribute name="horizontalHeaderCascadingSectionResizes">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="horizontalHeaderMinimumSectionSize">
+           <number>27</number>
+          </attribute>
+          <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>true</bool>
+          </attribute>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <column>
+           <property name="text">
+            <string>FILES_PATH</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>FILES_SIZE</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>FILES_READY</string>
+           </property>
+          </column>
+          <column>
+           <property name="text">
+            <string>FILES_PRIORITY</string>
+           </property>
+          </column>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>566</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="nativeMenuBar">
+    <bool>false</bool>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>MENU_FILE</string>
+    </property>
+    <addaction name="actionOpenTorrent"/>
+    <addaction name="action_magnet"/>
+    <addaction name="separator"/>
+    <addaction name="actionCreateTorrent"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>MENU_SETTINGS</string>
+    </property>
+    <addaction name="actionSettings"/>
+   </widget>
+   <widget class="QMenu" name="menu_CuteTorrent">
+    <property name="title">
+     <string>MENU_HELP</string>
+    </property>
+    <addaction name="actionAboutCuteTorrent"/>
+    <addaction name="actionCheckUpdate"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_CuteTorrent"/>
+  </widget>
+  <widget class="QStatusBar" name="mystatusBar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="contextMenuPolicy">
+    <enum>Qt::NoContextMenu</enum>
+   </property>
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <property name="movable">
+    <bool>false</bool>
+   </property>
+   <property name="floatable">
+    <bool>true</bool>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionStart"/>
+   <addaction name="actionPause"/>
+   <addaction name="actionRemove"/>
+   <addaction name="actionSettings_2"/>
+  </widget>
+  <action name="actionOpenTorrent">
+   <property name="icon">
+    <iconset resource="ltorrent.qrc">
+     <normaloff>:/MenuIcons/addTorrent.ico</normaloff>:/MenuIcons/addTorrent.ico</iconset>
+   </property>
+   <property name="text">
+    <string>MENU_OPEN_TORRENT</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::WindowShortcut</enum>
+   </property>
+   <property name="softKeyRole">
+    <enum>QAction::NoSoftKey</enum>
+   </property>
+  </action>
+  <action name="action_magnet">
+   <property name="icon">
+    <iconset resource="ltorrent.qrc">
+     <normaloff>:/MenuIcons/addUrl.ico</normaloff>:/MenuIcons/addUrl.ico</iconset>
+   </property>
+   <property name="text">
+    <string>MENU_OPEN_MAGNET</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+M</string>
+   </property>
+  </action>
+  <action name="actionCreateTorrent">
+   <property name="icon">
+    <iconset resource="ltorrent.qrc">
+     <normaloff>:/MenuIcons/createTorrent.ico</normaloff>:/MenuIcons/createTorrent.ico</iconset>
+   </property>
+   <property name="text">
+    <string>MENU_CREATE_TORRENT</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="icon">
+    <iconset resource="ltorrent.qrc">
+     <normaloff>:/MenuIcons/quit.ico</normaloff>:/MenuIcons/quit.ico</iconset>
+   </property>
+   <property name="text">
+    <string>MENU_EXIT</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+X</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::QuitRole</enum>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="icon">
+    <iconset resource="ltorrent.qrc">
+     <normaloff>:/MenuIcons/preferencies.ico</normaloff>:/MenuIcons/preferencies.ico</iconset>
+   </property>
+   <property name="text">
+    <string>MENU_CONFIGURATION</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::PreferencesRole</enum>
+   </property>
+  </action>
+  <action name="actionPause">
+   <property name="icon">
+    <iconset resource="ltorrent.qrc">
+     <normaloff>:/icons/pause.ico</normaloff>:/icons/pause.ico</iconset>
+   </property>
+   <property name="text">
+    <string>STR_PAUSE</string>
+   </property>
+   <property name="iconText">
+    <string>HINT_PAUSE</string>
+   </property>
+  </action>
+  <action name="actionStart">
+   <property name="icon">
+    <iconset resource="ltorrent.qrc">
+     <normaloff>:/icons/start.ico</normaloff>:/icons/start.ico</iconset>
+   </property>
+   <property name="text">
+    <string>STR_START</string>
+   </property>
+   <property name="iconText">
+    <string>HINT_RESUME</string>
+   </property>
+  </action>
+  <action name="actionRemove">
+   <property name="icon">
+    <iconset resource="ltorrent.qrc">
+     <normaloff>:/icons/remove.ico</normaloff>:/icons/remove.ico</iconset>
+   </property>
+   <property name="text">
+    <string>STR_REMOVE</string>
+   </property>
+   <property name="iconText">
+    <string>HINT_REMOVE</string>
+   </property>
+   <property name="toolTip">
+    <string>STR_REMOVE</string>
+   </property>
+  </action>
+  <action name="actionAboutCuteTorrent">
+   <property name="icon">
+    <iconset resource="ltorrent.qrc">
+     <normaloff>:/MenuIcons/about.ico</normaloff>:/MenuIcons/about.ico</iconset>
+   </property>
+   <property name="text">
+    <string>MENU_ABAUT</string>
+   </property>
+   <property name="shortcut">
+    <string>F1</string>
+   </property>
+   <property name="menuRole">
+    <enum>QAction::AboutRole</enum>
+   </property>
+  </action>
+  <action name="actionCheckUpdate">
+   <property name="icon">
+    <iconset resource="ltorrent.qrc">
+     <normaloff>:/MenuIcons/checkUpdates.ico</normaloff>:/MenuIcons/checkUpdates.ico</iconset>
+   </property>
+   <property name="text">
+    <string>MENU_CHECK_UPDATES</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
+  </action>
+  <action name="actionSettings_2">
+   <property name="icon">
+    <iconset resource="ltorrent.qrc">
+     <normaloff>:/icons/settings.ico</normaloff>:/icons/settings.ico</iconset>
+   </property>
+   <property name="text">
+    <string>STR_SETTINGS</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <tabstops>
+  <tabstop>tabWidget</tabstop>
+  <tabstop>listView</tabstop>
+ </tabstops>
+ <resources>
+  <include location="ltorrent.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionCreateTorrent</sender>
+   <signal>triggered()</signal>
+   <receiver>CuteTorrentClass</receiver>
+   <slot>ShowCreateTorrentDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>96</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionOpenTorrent</sender>
+   <signal>triggered()</signal>
+   <receiver>CuteTorrentClass</receiver>
+   <slot>ShowOpenTorrentDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>497</x>
+     <y>212</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionStart</sender>
+   <signal>triggered()</signal>
+   <receiver>CuteTorrentClass</receiver>
+   <slot>ResumeSelected()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>322</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionPause</sender>
+   <signal>triggered()</signal>
+   <receiver>CuteTorrentClass</receiver>
+   <slot>PauseSelected()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>322</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRemove</sender>
+   <signal>triggered()</signal>
+   <receiver>CuteTorrentClass</receiver>
+   <slot>DeleteSelected()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>319</x>
+     <y>322</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSettings</sender>
+   <signal>triggered()</signal>
+   <receiver>CuteTorrentClass</receiver>
+   <slot>OpenSettingsDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>282</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCheckUpdate</sender>
+   <signal>triggered()</signal>
+   <receiver>CuteTorrentClass</receiver>
+   <slot>checkForUpdates()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>282</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionAboutCuteTorrent</sender>
+   <signal>triggered()</signal>
+   <receiver>CuteTorrentClass</receiver>
+   <slot>ShowAbout()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>282</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>action_magnet</sender>
+   <signal>triggered()</signal>
+   <receiver>CuteTorrentClass</receiver>
+   <slot>ProcessMagnet()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>282</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSettings_2</sender>
+   <signal>triggered()</signal>
+   <receiver>CuteTorrentClass</receiver>
+   <slot>OpenSettingsDialog()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>282</x>
+     <y>329</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <signal>FillTorrentDetails(Torrent*)</signal>
+  <slot>ShowCreateTorrentDialog()</slot>
+  <slot>ShowOpenTorrentDialog()</slot>
+  <slot>PauseSelected()</slot>
+  <slot>ResumeSelected()</slot>
+  <slot>DeleteSelected()</slot>
+  <slot>OpenSettingsDialog()</slot>
+  <slot>checkForUpdates()</slot>
+  <slot>ShowAbaut()</slot>
+  <slot>ProcessMagnet()</slot>
+  <slot>copyDiscribtion()</slot>
+  <slot>StopSelected()</slot>
+ </slots>
+</ui>

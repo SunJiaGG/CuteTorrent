@@ -1,0 +1,47 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file alias="remove.ico">Resources/Actions-application-exit.ico</file>
+        <file alias="start.ico">Resources/Actions-arrow-right.ico</file>
+        <file alias="pause.ico">Resources/Actions-media-playback-pause.ico</file>
+        <file alias="my-audio.ico">Resources/audio.ico</file>
+        <file alias="my-default.ico">Resources/default.ico</file>
+        <file alias="my-doc.ico">Resources/doc.ico</file>
+        <file alias="my-movie.ico">Resources/movie.ico</file>
+        <file alias="my-picture.ico">Resources/picture.ico</file>
+        <file alias="my-folder.ico">Resources/folder.ico</file>
+        <file alias="app.ico">Resources/app.ico</file>
+        <file alias="my-iso.ico">Resources/File-iso-icon.ico</file>
+        <file alias="download.ico">Resources/download.ico</file>
+        <file alias="upload.ico">Resources/upload.ico</file>
+        <file alias="settings.ico">Resources/gtk_preferences.ico</file>
+        <file alias="my-archive.ico">Resources/archive.ico</file>
+    </qresource>
+    <qresource prefix="/translations">
+        <file>cutetorrent_russian.qm</file>
+        <file>cutetorrent_english.qm</file>
+    </qresource>
+    <qresource prefix="/PlayerControlImages">
+        <file alias="ControlBar.png">Resources/playerImages/ControlBar.png</file>
+        <file alias="FileButton.png">Resources/playerImages/FileButton.png</file>
+        <file alias="FullscreenButton.png">Resources/playerImages/FullscreenButton.png</file>
+        <file alias="PauseButton.png">Resources/playerImages/PauseButton.png</file>
+        <file alias="PlayButton.png">Resources/playerImages/PlayButton.png</file>
+        <file alias="RateButtonForward.png">Resources/playerImages/RateButtonForward.png</file>
+        <file alias="RateButtonReverse.png">Resources/playerImages/RateButtonReverse.png</file>
+        <file alias="UrlButton.png">Resources/playerImages/UrlButton.png</file>
+        <file alias="bg.png">Resources/playerImages/pattern.png</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file alias="loader.gif">Resources/images/loader.gif</file>
+        <file alias="ToolTipFrame.png">Resources/images/ToolTipFrame.png</file>
+    </qresource>
+    <qresource prefix="/MenuIcons">
+        <file alias="about.ico">Resources/MenuIcons/about.ico</file>
+        <file alias="addTorrent.ico">Resources/MenuIcons/addTorrent.ico</file>
+        <file alias="addUrl.ico">Resources/MenuIcons/addUrl.ico</file>
+        <file alias="checkUpdates.ico">Resources/MenuIcons/checkUpdates.ico</file>
+        <file alias="preferencies.ico">Resources/MenuIcons/preferencies.ico</file>
+        <file alias="quit.ico">Resources/MenuIcons/quit.ico</file>
+        <file alias="createTorrent.ico">Resources/MenuIcons/createTorrent.ico</file>
+    </qresource>
+</RCC>
